@@ -1,0 +1,12 @@
+{
+  "name": "wad-hw4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "ejs": "~2.6.1",
+    "express": "~4.16.1"
+  }
+}

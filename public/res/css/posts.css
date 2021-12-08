@@ -1,0 +1,67 @@
+.content-container {
+  background-color: rgb(26, 26, 26);
+  padding: 75px 50px 50px 50px;
+  width: min(900px, 80%);
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.post {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgb(34, 34, 34);
+}
+
+.post>.header {
+  margin: 0 0 10px 0;
+}
+
+.post>.header>img {
+  border-radius: 6px;
+  width: 2em;
+  height: 2em;
+}
+
+.post>.header span {
+  float: right;
+  color: lightgray;
+}
+
+.post>img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.post .title {
+  font-size: 1.5rem;
+}
+
+.post p {
+  margin: 15px 0 15px 0;
+}
+
+.post button {
+  color: rgb(34, 34, 34);
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.post button>i {
+  padding-right: 5px;
+  color: rgb(34, 34, 34);
+}
+
+.post button:hover {
+  background-color: lightskyblue;
+}
+
+.post button:active {
+  background-color: rgb(79, 79, 252);
+}

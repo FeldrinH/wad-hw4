@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="res/css/posts.css">
+    <title>Posts</title>
+</head>
+
 <body>
-    <% posts.forEach(post => { %>
-        <div><%= JSON.stringify(post) %></div>
-    <% }) %>
+    <div class="posts-page-container">
+        <section id="posts" class="content-container">
+            <% posts.forEach(post => { %>
+                <%- include('partials/post.ejs', { post }) %>
+            <% }) %>
+        </section>
+    </div>
 </body>
 
 </html>

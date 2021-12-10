@@ -4,22 +4,22 @@
   background-color: rgb(34, 34, 34);
 }
 
-.post>.header {
+.post .header {
   margin: 0 0 10px 0;
 }
 
-.post>.header>img {
+.post .header .avatar {
   border-radius: 6px;
   width: 2em;
   height: 2em;
 }
 
-.post>.header span {
+.post .header span {
   float: right;
   color: lightgray;
 }
 
-.post>img {
+.post .image {
   border-radius: 8px;
   width: 100%;
 }

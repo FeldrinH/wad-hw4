@@ -1,13 +1,15 @@
 <div class="post">
     <div class="header">
-        <img src="res/img/avatar.png" alt="Author avatar" />
+        <img class="avatar" src="res/img/avatar.png" alt="Author avatar" />
         <span><%= post.time_posted.toLocaleDateString('en-UK', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false}) %></span>
     </div>
-    <% if (post.image_url) { %>
-        <img src=<%= post.image_url %> alt="Post image" />
-    <% } %>
-    <p class="title"><%= post.title %></p>
-    <p><%= post.text %></p>
+    <% if (link) { %><a class="nostyle" href="/singlepost/<%= post.id %>"><% } %>
+        <% if (post.image_url) { %>
+            <img class="image" src="<%= post.image_url %>" alt="Post image" />
+        <% } %>
+        <p class="title"><%= post.title %></p>
+        <p><%= post.text %></p>
+    <% if (link) { %></a><% } %>
     <div class="footer">
         <button onclick="likePost(this, <%= post.id %>)">
             <i class="fas fa-thumbs-up"></i>

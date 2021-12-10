@@ -12,7 +12,7 @@
     <%- include partials/header %>
     <section class="content-container">
         <% posts.forEach(post => { %>
-            <%- include('partials/post.ejs', { post }) %>
+            <%- include('partials/post.ejs', { post, link: true }) %>
         <% }) %>
     </section>
     <%- include partials/footer %>

@@ -46,6 +46,8 @@
 
 .post button>i {
   padding-right: 5px;
+  display: inline-block;
+  min-width: 1em;
 }
 
 .post button:hover {

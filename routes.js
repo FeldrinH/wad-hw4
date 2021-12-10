@@ -5,7 +5,7 @@ const db = require('./db')
 const routes = express.Router()
 
 routes.get('/', asyncHandler(async (req, res) => {
-    const posts = await db.query('SELECT * FROM posts')
+    const posts = await db.query('SELECT * FROM posts ORDER BY time_posted DESC')
     res.render('posts', { posts })
 }))
 

@@ -18,6 +18,7 @@ routes.get('/addnewpost', asyncHandler(async (req, res) => res.render('addnewpos
 
 routes.post('/addnewpost', asyncHandler(async (req, res) => {
     // TODO: Read form data and add post, then redirect to singlepost page for new post
+    // NOTE: Use CURRENT_TIMESTAMP to get current time in sql query when adding post
 }))
 
 routes.post('/api/likepost/:id', asyncHandler(async (req, res) => {

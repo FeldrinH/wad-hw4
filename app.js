@@ -16,7 +16,7 @@ app.use(routes)
 
 app.use((req, res) => {
   res.status(404)
-  res.render('404')
+  res.render('message', { title: '404: Page not found', message: `404: Page ${req.url} not found` })
 });
 
 console.log("Server started on port 8080")

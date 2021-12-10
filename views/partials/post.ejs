@@ -9,6 +9,9 @@
     <p class="title"><%= post.title %></p>
     <p><%= post.text %></p>
     <div class="footer">
-        <button v-on:click="likePost"><i class="fas fa-thumbs-up"></i><%= post.likes %></button>
+        <button onclick="likePost(this, <%= post.id %>)">
+            <i class="fas fa-thumbs-up"></i>
+            <span class="likes-text"><%= post.likes %></span>
+        </button>
     </div>
 </div>

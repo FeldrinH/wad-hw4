@@ -2,19 +2,20 @@
 <html>
 
 <head>
-    <%- include('partials/head.ejs') %>
-    <link rel="stylesheet" href="res/css/posts.css">
+    <%- include partials/head %>
+    <link rel="stylesheet" href="/res/css/posts.css">
+    <script src="/res/js/post_client.js"></script>
     <title>Posts</title>
 </head>
 
 <body>
-    <div class="posts-page-container">
-        <section id="posts" class="content-container">
-            <% posts.forEach(post => { %>
-                <%- include('partials/post.ejs', { post }) %>
-            <% }) %>
-        </section>
-    </div>
+    <%- include partials/header %>
+    <section class="content-container">
+        <% posts.forEach(post => { %>
+            <%- include('partials/post.ejs', { post }) %>
+        <% }) %>
+    </section>
+    <%- include partials/footer %>
 </body>
 
 </html>

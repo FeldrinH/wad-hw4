@@ -3,7 +3,7 @@ async function likePost(button, id) {
 
     const likesTexts = button.getElementsByClassName('likes-text')
 
-    const response = await fetch(`/likepost/${id}`, { method: 'POST' })
+    const response = await fetch(`/api/likepost/${id}`, { method: 'POST' })
     const newValue = await response.json()
 
     for (const el of likesTexts) {

@@ -17,13 +17,16 @@ routes.get('/singlepost/:id', asyncHandler(async (req, res) => {
 routes.get('/addnewpost', asyncHandler(async (req, res) => res.render('addnewpost')))
 
 routes.post('/addnewpost', asyncHandler(async (req, res) => {
-    // TODO: Read form data and add post
-    res.render('message', { title: 'Post added', message: 'Successfully added new post' })
+    // TODO: Read form data and add post, then redirect to singlepost page for new post
 }))
 
-routes.post('/likepost/:id', asyncHandler(async (req, res) => {
+routes.post('/api/likepost/:id', asyncHandler(async (req, res) => {
     const newValue = await db.queryOne('UPDATE posts SET likes = likes + 1 WHERE id = $1 RETURNING likes', [req.params.id])
     res.send(newValue)
+}))
+
+routes.post('/api/deletepost/:id', asyncHandler(async (req, res) => {
+    // TODO: Delete post
 }))
 
 module.exports = routes

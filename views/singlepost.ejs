@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <%- include partials/head %>
+    <link rel="stylesheet" href="/res/css/posts.css">
+    <script src="/res/js/post_client.js"></script>
+    <title>Post | <%= post.title %></title>
+</head>
+
 <body>
-    <div style="white-space: pre-wrap"><%= JSON.stringify(post, null, 2) %></div>
+    <%- include partials/header %>
+    <section class="content-container">
+        <%- include('partials/post.ejs', { post, link: false }) %>
+    </section>
+    <%- include partials/footer %>
 </body>
 
 </html>

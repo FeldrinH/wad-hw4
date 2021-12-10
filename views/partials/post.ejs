@@ -1,6 +1,6 @@
 <div class="post">
     <div class="header">
-        <img class="avatar" src="res/img/avatar.png" alt="Author avatar" />
+        <img class="avatar" src="/res/img/avatar.png" alt="Author avatar" />
         <span><%= post.time_posted.toLocaleDateString('en-UK', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false}) %></span>
     </div>
     <% if (link) { %><a class="nostyle" href="/singlepost/<%= post.id %>"><% } %>

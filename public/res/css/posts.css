@@ -40,11 +40,11 @@
   cursor: pointer;
 }
 
-.post button>* {
+.post button > * {
   color: rgb(34, 34, 34);
 }
 
-.post button>i {
+.post button > i {
   padding-right: 5px;
   display: inline-block;
   min-width: 1em;
@@ -54,6 +54,21 @@
   background-color: lightskyblue;
 }
 
-.post button:active, .post button:disabled {
+.post button:active,
+.post button:disabled {
   background-color: rgb(79, 79, 252);
+}
+
+.deleteButton {
+  width: 15%;
+  height: 40px;
+  background-color: gray;
+  color: darkred;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.deleteButton:hover {
+  background-color: darkgray;
 }

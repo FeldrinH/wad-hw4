@@ -12,7 +12,7 @@
     <%- include partials/header %>
     <section class="content-container">
         <%- include('partials/post.ejs', { post, link: false }) %>
-        TODO: Delete button here
+        <button class="deleteButton" onclick="deletePost(<%= post.id %>)">Delete Post</button>
     </section>
     <%- include partials/footer %>
 </body>

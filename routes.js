@@ -26,8 +26,15 @@ routes.post('/api/likepost/:id', asyncHandler(async (req, res) => {
     res.send(newValue)
 }))
 
-routes.post('/api/deletepost/:id', asyncHandler(async (req, res) => {
-    // TODO: Delete post
+routes.delete('/singlepost/:id', asyncHandler(async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletepost = await db.query(
+        "DELETE FROM posts WHERE id = $1", [id]
+        );
+        } catch (err) {
+        console.error(err.message);
+        }
 }))
 
 module.exports = routes

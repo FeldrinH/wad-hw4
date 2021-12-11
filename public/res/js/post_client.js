@@ -10,3 +10,10 @@ async function likePost(button, id) {
         el.textContent = newValue.likes
     }
 }
+
+async function deletePost(id) {  
+    const endpoint = `/singlepost/${id}`;
+    fetch(endpoint, {
+    method: 'DELETE',
+    }).then(window.location.href = '/');
+}

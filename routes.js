@@ -1,5 +1,5 @@
 const express = require('express')
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler') // Simple wrapper for handler functions that ensures errors in async functions are correctly propagated to the next handler
 const db = require('./db')
 
 const routes = express.Router()

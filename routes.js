@@ -21,20 +21,16 @@ routes.post('/addnewpost', asyncHandler(async (req, res) => {
     // NOTE: Use CURRENT_TIMESTAMP to get current time in sql query when adding post
 }))
 
-routes.post('/api/likepost/:id', asyncHandler(async (req, res) => {
+routes.post('/api/post/:id/like', asyncHandler(async (req, res) => {
     const newValue = await db.queryOne('UPDATE posts SET likes = likes + 1 WHERE id = $1 RETURNING likes', [req.params.id])
     res.send(newValue)
 }))
 
-routes.delete('/singlepost/:id', asyncHandler(async (req, res) => {
-    try {
-        const { id } = req.params;
-        const deletepost = await db.query(
+routes.delete('/api/post/:id', asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    await db.query(
         "DELETE FROM posts WHERE id = $1", [id]
-        );
-        } catch (err) {
-        console.error(err.message);
-        }
+    );
 }))
 
 module.exports = routes

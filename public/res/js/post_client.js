@@ -3,7 +3,7 @@ async function likePost(button, id) {
 
     const likesTexts = button.getElementsByClassName('likes-text')
 
-    const response = await fetch(`/api/likepost/${id}`, { method: 'POST' })
+    const response = await fetch(`/api/post/${id}/like`, { method: 'POST' })
     const newValue = await response.json()
 
     for (const el of likesTexts) {
@@ -11,9 +11,10 @@ async function likePost(button, id) {
     }
 }
 
-async function deletePost(id) {  
-    const endpoint = `/singlepost/${id}`;
-    fetch(endpoint, {
-    method: 'DELETE',
-    }).then(window.location.href = '/');
+async function deletePost(id) {
+    const endpoint = `/api/post/${id}`;
+    await fetch(endpoint, {
+        method: 'DELETE',
+    });
+    window.location.href = '/';
 }

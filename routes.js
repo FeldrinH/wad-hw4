@@ -31,6 +31,7 @@ routes.delete('/api/post/:id', asyncHandler(async (req, res) => {
     await db.query(
         "DELETE FROM posts WHERE id = $1", [id]
     );
+    res.sendStatus(204)
 }))
 
 module.exports = routes

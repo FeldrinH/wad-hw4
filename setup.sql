@@ -18,6 +18,6 @@ INSERT INTO posts (time_posted, title, text, image_url) VALUES
 ('October 19, 2021 21:06 Europe/Tallinn', 'Enne kontrolltööd', 'Istun toolil. Homme on kontrolltöö.', NULL),
 ('October 21, 2021 19:19 Europe/Tallinn', 'Pärast kontrolltööd', 'Istun jälle toolil. Eile oli kontrolltööd.', NULL),
 ('October 29, 2021 03:11 Europe/Tallinn', 'エストニアを訪問', 'とても素敵な国です。残念ながら、私はその言語を理解できません。', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/2016_Flughafen_Tallinn_-_%C3%9Cberflug.jpg/2560px-2016_Flughafen_Tallinn_-_%C3%9Cberflug.jpg'),
-('November 1, 2021 14:13 Europe/Tallinn', 'Day at university', 'Spending the whole day doing university things today. Have a lecture in two minutes.', NULL),
+('November 1, 2021 14:13 Europe/Tallinn', 'Day at university', E'Spending the whole day doing university things today.\n\nHave a lecture in two minutes.', NULL),
 ('November 7, 2021 12:21 Europe/Tallinn', 'Day at home', 'Today is Sunday, so I have the day off. It''s nice to get some rest sometimes.', NULL),
 ('November 10, 2021 04:12 Europe/Tallinn', '私は家に帰ってきました', 'ようやく家に帰ってきました。エストニアは良かったですが、自分の家に戻ったのも良かったです。', 'https://upload.wikimedia.org/wikipedia/commons/4/4f/New_Chitose_airport_from_the_sky.JPG')

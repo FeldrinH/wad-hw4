@@ -17,19 +17,23 @@ routes.get('/singlepost/:id', asyncHandler(async (req, res) => {
 routes.get('/addnewpost', asyncHandler(async (req, res) => res.render('addnewpost')))
 
 routes.post('/addnewpost', asyncHandler(async (req, res) => {
+    console.log(req.body)
     // TODO: Read form data and add post, then redirect to singlepost page for new post
     // NOTE: Use CURRENT_TIMESTAMP to get current time in sql query when adding post
 }))
 
-routes.post('/api/post/:id/like', asyncHandler(async (req, res) => {
-    const newValue = await db.queryOne('UPDATE posts SET likes = likes + 1 WHERE id = $1 RETURNING likes', [req.params.id])
+routes.post('/posts/:id/like', asyncHandler(async (req, res) => {
+    const newValue = await db.queryOne(
+        'UPDATE posts SET likes = likes + 1 WHERE id = $1 RETURNING likes',
+        [req.params.id]
+    )
     res.send(newValue)
 }))
 
-routes.delete('/api/post/:id', asyncHandler(async (req, res) => {
-    const { id } = req.params;
+routes.delete('/posts/:id', asyncHandler(async (req, res) => {
     await db.query(
-        "DELETE FROM posts WHERE id = $1", [id]
+        "DELETE FROM posts WHERE id = $1",
+        [req.params.id]
     );
     res.sendStatus(204)
 }))

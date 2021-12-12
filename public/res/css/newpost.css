@@ -1,0 +1,45 @@
+form {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgb(34, 34, 34);
+}
+
+form label {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    color: black;
+}
+
+form textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+form button {
+    display: block;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    width: 200px;
+    padding: 6px;
+    margin: 50px auto 0 auto;
+    border: none;
+    border-radius: 2px;
+}
+
+form button:hover {
+    background-color: darkgrey;
+}
+
+.input-group {
+    margin: 0 auto 20px auto;
+    width: 500px;
+}

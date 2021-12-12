@@ -17,7 +17,11 @@ routes.get('/singlepost/:id', asyncHandler(async (req, res) => {
 routes.get('/addnewpost', asyncHandler(async (req, res) => res.render('addnewpost')))
 
 routes.post('/addnewpost', asyncHandler(async (req, res) => {
-    console.log(req.body)
+    const newValue = await db.queryOne(
+        'INSERT INTO posts (time_posted, title, text, image_url) VALUES (CURRENT_TIMESTAMP, $1, $2, $3) RETURNING id',
+        [req.body.title, req.body.content, req.body.image_url.trim() || null]
+    )
+    res.redirect(`/singlepost/${newValue.id}`)
     // TODO: Read form data and add post, then redirect to singlepost page for new post
     // NOTE: Use CURRENT_TIMESTAMP to get current time in sql query when adding post
 }))

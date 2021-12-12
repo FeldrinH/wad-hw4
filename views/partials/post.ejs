@@ -8,7 +8,7 @@
             <img class="image" src="<%= post.image_url %>" alt="Post image" />
         <% } %>
         <p class="title"><%= post.title %></p>
-        <p><%= post.text %></p>
+        <p class="content"><%= post.text %></p>
     <% if (link) { %></a><% } %>
     <div class="footer">
         <button onclick="likePost(this, <%= post.id %>)">

@@ -14,7 +14,9 @@ routes.get('/singlepost/:id', asyncHandler(async (req, res) => {
     res.render('singlepost', { post })
 }))
 
-routes.get('/addnewpost', asyncHandler(async (req, res) => res.render('addnewpost')))
+routes.get('/addnewpost', asyncHandler(async (req, res) => {
+    res.render('addnewpost')
+}))
 
 routes.post('/addnewpost', asyncHandler(async (req, res) => {
     const newValue = await db.queryOne(

@@ -11,9 +11,13 @@
 <body>
     <%- include partials/header %>
     <section class="content-container">
-        <% posts.forEach(post => { %>
-            <%- include('partials/post.ejs', { post, link: true }) %>
-        <% }) %>
+        <% if (posts.length === 0) { %>
+            You did not post anything
+        <% } else { %>
+            <% posts.forEach(post => { %>
+                <%- include('partials/post.ejs', { post, link: true }) %>
+            <% }) %>
+        <% } %>
     </section>
     <%- include partials/footer %>
 </body>
